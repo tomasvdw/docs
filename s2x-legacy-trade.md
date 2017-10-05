@@ -1,6 +1,6 @@
 # Step by Step guide for a 1:1 SegWit2x and SegWit1x with minimal trust
 
-This is a guide to exchange SegWit and SegWit2x 1:1 without 3rd party and with minimal trust. It is a long explanation but only a few steps and it  can be completed in ~ 15-30 min.
+This is a guide to exchange SegWit1X and SegWit2x 1:1 without 3rd party and with minimal trust.
 
 Let Alice and Bob agree to an amount X and that 
 
@@ -128,9 +128,9 @@ Step 1 is complete if the multisig is confirmed. The **MULTISIG_TXID** is then u
 
 Alice now creates a transaction that spends **MULTISIG_TXID** to Bob and is *only* valid on the legacy chain, and only  after the fork. For this she will need a new address of herself **A_ADR** and of Bob **B_ADR**. 
 
-She will also need the redeemscript from `createmultisig` above, and the `scriptPubKey` from `decoderawtransaction` of the final hex. She can then pay 2X+Y to herself, and Y to Bob
+She will also need the redeemscript from `createmultisig` above, and the `scriptPubKey` from `decoderawtransaction` of the final hex. She can then pay 2X+Y to Bob, and Y to herself
 
-    A> bitcoin-cli createrawtransaction '[{"txid":"$MULTISIG_TXID$","vout":0,"scriptPubKey":"...","redeemScript":"..."}]' '{"$A_ADR$":Y, "$B_ADR":2X+Y, "1BTC1dsafjsf":0.000001}' 494785
+    A> bitcoin-cli createrawtransaction '[{"txid":"$MULTISIG_TXID$","vout":0,"scriptPubKey":"...","redeemScript":"..."}]' '{"$A_ADR$":Y, "$B_ADR":2X+Y, "3Bit1xA4apyzgmFNT2k8Pvnd6zb6TnwcTi":0.000001}' 494785
     020000...00000
     
     A> bitcoin-cli signrawtransaction 0200000...0000
