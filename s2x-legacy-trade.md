@@ -1,4 +1,4 @@
-# Step by Step guide for a 1:1 SegWit2x and SegWit1x with minimal trust
+# Step by Step guide for a 1:1 swap SegWit2x and SegWit1x with minimal trust
 
 This is a guide to exchange SegWit1X and SegWit2x 1:1 without 3rd party and with minimal trust.
 
